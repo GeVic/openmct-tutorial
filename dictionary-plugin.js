@@ -1,5 +1,9 @@
 function DictionaryPlugin(){
   return function install() {
-    console.log("It's installed"); // Update the htm file to include the same
+    // Root node using Open MCT API
+    openmct.objects.addRoot({
+      namespace: 'space.taxonomy',
+      key: 'spacecraft'
+    });
   }
 };
